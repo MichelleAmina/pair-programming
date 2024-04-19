@@ -17,3 +17,19 @@ Constraints:
 The number of nodes in the list is in the range [1, 100].
 1 <= Node.val <= 100
 */
+
+function middlenode(head) {
+    let firstpointer = head;
+    let secondpointer = head;
+
+    while(secondpointer !== null && secondpointer.next !== null){
+        firstpointer = firstpointer.next;
+        secondpointer = secondpointer.next.next;
+    }
+    return firstpointer
+}
+
+console.log(middlenode([1,2,3,4,5]));
+console.log(middlenode([1,2,3,4,5,6]));
+console.log(middlenode([20,30.40]));
+console.log(middlenode([1,2]));

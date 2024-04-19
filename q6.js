@@ -35,3 +35,19 @@ word1:  a   b   c   d
 word2:    p   q 
 merged: a p b q c   d
 */
+
+function mergeAlternately(word1, word2){
+    let word = ''
+
+    let length = Math.max(word1.length, word2.length)
+
+    for(let i=0; i < length; i++){
+        if (word1[i]) word += word1[i]
+        if (word2[i]) word += word2[i]
+    }
+    return word
+}
+
+console.log(mergeAlternately("ab", "pqrs")); 
+console.log(mergeAlternately("abcd", "pq")); 
+console.log(mergeAlternately("amina", "ndanu")); 
