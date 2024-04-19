@@ -27,3 +27,14 @@ Input: s = "a good   example"
 Output: "example good a"
 Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string.
 */
+
+function reverseWords(s){
+    const words = s.trim().split(/\s+/)
+    return words.reverse().join(' ')
+
+}
+
+console.log(reverseWords("  hello world  "))
+console.log(reverseWords("the sky is blue"))
+console.log(reverseWords("a good   example"))
+console.log(reverseWords("michelle         ndanu"))
